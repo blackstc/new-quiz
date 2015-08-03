@@ -3,7 +3,7 @@ var quiz = [
     uniqueID: 1,
     question: "Who shot first Han Solo or Greedo",
     options: ["Han Solo", "Greedo"],
-    answer: " Han Solo"
+    answer: "Han Solo"
   },
   {
     uniqueID: 2,

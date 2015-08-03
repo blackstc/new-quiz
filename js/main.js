@@ -23,7 +23,7 @@ $(document).on('ready', function() {
             $('#quiz').show();
             $('#loadbar').fadeOut();
            /* something else */
-      }, 1000);
+        }, 1000);
     });
 
     //input: question text and question number. Process: add question and related options to a single Div.  Out: appends new div of questions and answers to the DOM.
@@ -36,7 +36,7 @@ $(document).on('ready', function() {
 
     //input: answer option and unique ID.  Process: add the text and unique id to an html input and append to DOM.  Out:  appends new text and ID to the DOM
     function createAnswers(text, id) {
-      $('#quiz').append('<label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">' + text + '</label>');
+      $('#quiz').append('<label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><input type="radio" name="q_answer" value="1">' + text + '</label>');
     }
 
 
@@ -45,12 +45,25 @@ $(document).on('ready', function() {
     var counter = 0;
 
     if (quiz[questionNum - 1].answer === answer) {
+      $(".modal-footer").append("<button type='button' class='btn btn-md btn-primary btn-next'>Next</button>");
       return "CORRECT";
     } else {
       return "INCORRECT";
     }
+
   };
 
+  var questionNum = 2;
+  $(".modal-footer").on('click', "button", function() {
+    console.log('hi');
+    $(".modal-header").empty();
+    $(".quiz").empty();
+    $("#answer").empty();
+    $(".btn-next").remove();
+
+    createQuestion(quiz[questionNum - 1].question, questionNum);
+    questionNum++;
+  });
 
   });
 
