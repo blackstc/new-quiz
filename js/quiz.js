@@ -43,9 +43,9 @@ var quiz = [
   },
   {
     uniqueID: 8,
-    question: "var nums = [1, 2, 3];<br>nums.splice(nums.indexOf(('wtf'), 1);<br>What is nums?",
-    options: ["[1, 2, 3]", "NaN", "[]", "[1, 2]"],
-    answer: "[1, 2]"
+    question: "if true == 'true' => true<br>false == 'fasle' => ?",
+    options: ["true", "false", "Michael Herman"],
+    answer: "false"
   },
   {
     uniqueID: 9,
@@ -58,12 +58,5 @@ var quiz = [
     question: "var nums = [1, 2, 3];<br>nums.splice(nums.indexOf(('wtf'), 1);<br>What is nums?",
     options: ["[1, 2, 3]", "NaN", "[]", "[1, 2]"],
     answer: "[1, 2]"
-  },
-  {
-    uniqueID: 11,
-    question: "var nums = [1, 2, 3];<br>nums.splice(nums.indexOf(('wtf'), 1);<br>What is nums?",
-    options: ["[1, 2, 3]", "NaN", "[]", "[1, 2]"],
-    answer: "[1, 2]"
   }
-
 ];
